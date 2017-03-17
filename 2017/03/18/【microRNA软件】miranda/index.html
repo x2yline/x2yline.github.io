@@ -17,7 +17,7 @@
 <meta property="og:url" content="x2yline.github.io/2017/03/18/【microRNA软件】miranda/index.html">
 <meta property="og:site_name" content="x2yline's blog">
 <meta property="og:description" content="http://www.microrna.orgmiranda - Finds potential target sites for miRNAs in genomic sequence">
-<meta property="og:updated_time" content="2017-03-17T17:28:36.434Z">
+<meta property="og:updated_time" content="2017-03-17T17:32:15.697Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="【microRNA软件】miranda">
 <meta name="twitter:description" content="http://www.microrna.orgmiranda - Finds potential target sites for miRNAs in genomic sequence">
@@ -107,7 +107,7 @@
 <p>使用方法1：下载C代码压缩包<a href="http://cbio.mskcc.org/microrna_data/miRanda-aug2010.tar.gz后，在linux系统下进行编译安装后（安装方法见README文件）命令行输入：" target="_blank" rel="external">http://cbio.mskcc.org/microrna_data/miRanda-aug2010.tar.gz后，在linux系统下进行编译安装后（安装方法见README文件）命令行输入：</a><br>命令行输入：miranda file1 file2 [-sc score] [-en energy] [-scale scale] [-strict] [-go X] [-ge Y] [-out fileout] [-quiet] [-trim T] [-noenergy] [-restrict file]</p>
 <p>中括号中是可选参数，file1 是RNA（miRNA）的 FASTA 格式文件，file2是某个基因的FASTA 格式的文件<br>该软件使用两部法进行靶标的预测：<br>第一步是用动态规划算法进行两个序列之间的局部比对，基于互补结果进行打分，软件允许G:U的配对，不过分数比正常的配对低一点。<br>第二步是选择第一步中分数较高的比对结果（设置阈值，阈值以-sc表示），并对查询序列（miRNA），连接序列和倒转的参考序列的折叠结构热稳定性进行计算（计算出其最低自由能），计算方法来源于 Ivo Hofacker写的 ViennaRNA包中的 子程序 RNAlib。<br>最后筛选出自由能小于阈值（记为-en）的靶序列，输出靶标序列位点和阈值信息。</p>
 <p>示例如下：</p>
-<p><html><br>[root@localhost bin]# ./miranda /root/biosoft/miRNA/miRanda-3.3a/examples/bantam_stRNA.fasta /root/biosoft/miRNA/miRanda-3.3a/examples/hid_UTR.fasta</html></p>
+<p></p><p><br>[root@localhost bin]# ./miranda /root/biosoft/miRNA/miRanda-3.3a/examples/bantam_stRNA.fasta /root/biosoft/miRNA/miRanda-3.3a/examples/hid_UTR.fasta</p>
 <p>=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=</p>
 <h1 id="miranda-v3-3a-microRNA-Target-Scanning-Algorithm"><a href="#miranda-v3-3a-microRNA-Target-Scanning-Algorithm" class="headerlink" title="miranda v3.3a microRNA Target Scanning Algorithm"></a>miranda v3.3a microRNA Target Scanning Algorithm</h1><p>(c) 2003 Memorial Sloan-Kettering Cancer Center, New York</p>
 <p>Authors: Anton Enright, Bino John, Chris Sander and Debora Marks<br>(mirnatargets (at) cbio.mskcc.org - reaches all authors)</p>
@@ -150,7 +150,7 @@
 <p>gi|29565487|emb|AJ550546.1| gi|945100|gb|U31226.1|DMU31226 630.00 -73.32 167.00 -24.54 1 21 3902 3340 2505 2852 3820<br>Complete</p>
 </blockquote>
 </blockquote>
-<p>Scan complete<br><br>使用方法2：在线使用<br>在线使用的工具的比对方法和下载的软件相同，不过使用了机器学习的算对靶标进行评分，不再严格按照传统的seed序列进行评分，能够发现新的靶标基因，详细介绍在 <a href="http://genomebiology.biomedcentral.com/articles/10.1186/gb-2010-11-8-r90。" target="_blank" rel="external">http://genomebiology.biomedcentral.com/articles/10.1186/gb-2010-11-8-r90。</a><br>在线工具还有查看miRNA的表达谱功能（也可以直接下载所有表达谱数据），数据来源为：<br>Landgraf, Pablo, et al. “A mammalian microRNA expression atlas based on small RNA library sequencing.” Cell 129.7 (2007): 1401-1414.</p>
+<p>Scan complete<br></p><br>使用方法2：在线使用<br>在线使用的工具的比对方法和下载的软件相同，不过使用了机器学习的算对靶标进行评分，不再严格按照传统的seed序列进行评分，能够发现新的靶标基因，详细介绍在 <a href="http://genomebiology.biomedcentral.com/articles/10.1186/gb-2010-11-8-r90。" target="_blank" rel="external">http://genomebiology.biomedcentral.com/articles/10.1186/gb-2010-11-8-r90。</a><br>在线工具还有查看miRNA的表达谱功能（也可以直接下载所有表达谱数据），数据来源为：<br>Landgraf, Pablo, et al. “A mammalian microRNA expression atlas based on small RNA library sequencing.” Cell 129.7 (2007): 1401-1414.<p></p>
   
 	</div>
 		<footer class="article-footer clearfix">
