@@ -4,19 +4,28 @@
 <head>
   <meta charset="UTF-8">
   
-    <title>x2yline&#39;s blog</title>
+    <title>[python可视化笔记1]自定义作图风格与参数 | x2yline&#39;s blog</title>
     <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
     
     <meta name="author" content="x2yline">
     
 
     
-    <meta property="og:type" content="website">
-<meta property="og:title" content="x2yline's blog">
-<meta property="og:url" content="x2yline.github.io/index.html">
+    <meta name="description" content="自定义matplotlib 使用style sheet1234import matplotlib.pyplot as pltplt.style.use(&amp;apos;ggplot&amp;apos;)#使用ggplot风格plt.plot([1,2,3,4], [1,2,3,4])plt.show() 合并使用风格123456789import matplotlib.pyplot as pltplt.sty">
+<meta name="keywords" content="python,matplotlib,可视化">
+<meta property="og:type" content="article">
+<meta property="og:title" content="[python可视化笔记1]自定义作图风格与参数">
+<meta property="og:url" content="x2yline.github.io/2017/04/15/python可视化笔记1-自定义作图风格与参数/index.html">
 <meta property="og:site_name" content="x2yline's blog">
+<meta property="og:description" content="自定义matplotlib 使用style sheet1234import matplotlib.pyplot as pltplt.style.use(&amp;apos;ggplot&amp;apos;)#使用ggplot风格plt.plot([1,2,3,4], [1,2,3,4])plt.show() 合并使用风格123456789import matplotlib.pyplot as pltplt.sty">
+<meta property="og:image" content="https://x2yline.github.io/2017/04/15/[python可视化笔记1]自定义作图风格与参数/figure_1.png">
+<meta property="og:image" content="https://x2yline.github.io/2017/04/15/[python可视化笔记1]自定义作图风格与参数/figure_3.png">
+<meta property="og:image" content="https://x2yline.github.io/2017/04/15/[python可视化笔记1]自定义作图风格与参数/figure_4.png">
+<meta property="og:updated_time" content="2017-04-15T11:02:50.132Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="x2yline's blog">
+<meta name="twitter:title" content="[python可视化笔记1]自定义作图风格与参数">
+<meta name="twitter:description" content="自定义matplotlib 使用style sheet1234import matplotlib.pyplot as pltplt.style.use(&amp;apos;ggplot&amp;apos;)#使用ggplot风格plt.plot([1,2,3,4], [1,2,3,4])plt.show() 合并使用风格123456789import matplotlib.pyplot as pltplt.sty">
+<meta name="twitter:image" content="https://x2yline.github.io/2017/04/15/[python可视化笔记1]自定义作图风格与参数/figure_1.png">
 <link rel="publisher" href="104248612365661830000">
 
     
@@ -70,12 +79,10 @@
 </div>
     </header>
     <div id="container">
-      <div id="main">
-
-   
-    
-    <article class="post-expand post" itemprop="articleBody"> 
-        <header class="article-info clearfix">
+      <div id="main" class="post" itemscope itemprop="blogPost">
+  
+	<article itemprop="articleBody"> 
+		<header class="article-info clearfix">
   <h1 itemprop="name">
     
       <a href="/2017/04/15/python可视化笔记1-自定义作图风格与参数/" title="[python可视化笔记1]自定义作图风格与参数" itemprop="url">[python可视化笔记1]自定义作图风格与参数</a>
@@ -89,20 +96,22 @@
     
   </p>
 </header>
-    <div class="article-content">
-        
-        <p></p><h2>自定义matplotlib</h2><p></p>
+	<div class="article-content">
+		
+		<div id="toc" class="toc-article">
+			<strong class="toc-title">文章目录</strong>
+		
+			<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#undefined"><span class="toc-number">1.</span> <span class="toc-text">自定义matplotlib</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">1.1.</span> <span class="toc-text">使用style sheet</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#undefined"><span class="toc-number">1.1.1.</span> <span class="toc-text">合并使用风格</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">1.2.</span> <span class="toc-text">命令申明：使用和改变matplotlib.rcParams这个类似字典变量的值, 或matplotlib.rc传入一个数组类值</span></a></li></ol></li></ol>
+		
+		</div>
+		
+		<p></p><h2>自定义matplotlib</h2><p></p>
 <p></p><h3>使用style sheet</h3><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">import matplotlib.pyplot as plt</div><div class="line">plt.style.use(&apos;ggplot&apos;)#使用ggplot风格</div><div class="line">plt.plot([1,2,3,4], [1,2,3,4])</div><div class="line">plt.show()</div></pre></td></tr></table></figure><br><img src="https://x2yline.github.io/2017/04/15/[python可视化笔记1]自定义作图风格与参数/figure_1.png"><p></p>
 <p></p><h4>合并使用风格</h4><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">import matplotlib.pyplot as plt</div><div class="line">plt.style.use([&apos;ggplot&apos;, &apos;classic&apos;])#注：如果有重叠则左边的被右边的覆盖</div><div class="line">plt.plot([1,2,3,4], [1,2,3,4])</div><div class="line">plt.show()</div><div class="line">&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;&amp;lt;img src=&amp;quot;https://x2yline.github.io/2017/04/15[python可视化笔记1]自定义作图风格与参数/figure_2.png&amp;quot;&amp;gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&amp;lt;h4&amp;gt;暂时使用某一风格&amp;lt;/h4&amp;gt;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;br&gt;import matplotlib.pyplot as plt&lt;br&gt;print(plt.style.available)#打印出所有可选的风格&lt;br&gt;plt.plot([1,2,3,4,5,6,7])#斜率为1&lt;/p&gt;</div><div class="line">&lt;p&gt;with plt.style.context((‘fivethirtyeight’)):&lt;br&gt;    plt.plot([1,2,3],[2,4,6])#斜率为2&lt;/p&gt;</div><div class="line">&lt;p&gt;plt.plot([1,2,3], [4, 8, 12])#斜率为3&lt;/p&gt;</div><div class="line">&lt;p&gt;with plt.style.context((‘fivethirtyeight’)):&lt;br&gt;    plt.plot([1,2,3], [6,12,18])#斜率为4&lt;/p&gt;</div><div class="line">&lt;p&gt;plt.show()&lt;br&gt;</div></pre></td></tr></table></figure><br><img src="https://x2yline.github.io/2017/04/15/[python可视化笔记1]自定义作图风格与参数/figure_3.png"><p></p>
 <p></p><h3>命令申明：使用和改变matplotlib.rcParams这个类似字典变量的值, 或matplotlib.rc传入一个数组类值</h3><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">import matplotlib as mpl</div><div class="line">import matplotlib.pyplot as plt</div><div class="line">mpl.rc(&apos;lines&apos;, linewidth=4, color=&apos;b&apos;, linestyle=&apos;--&apos;)</div><div class="line">plt.plot([1,2,3,4,5,6,7])</div><div class="line"></div><div class="line">mpl.rcParams[&apos;lines.linewidth&apos;]=1</div><div class="line">mpl.rcParams[&apos;lines.linestyle&apos;]=&apos;-&apos;</div><div class="line">plt.plot([1,2,3], [6,12,18])</div><div class="line">plt.show()</div></pre></td></tr></table></figure><br><img src="https://x2yline.github.io/2017/04/15/[python可视化笔记1]自定义作图风格与参数/figure_4.png"><p></p>
-
-        
-        
-        <p class="article-more-link">
-          
-       </p>
-    </div>
-    <footer class="article-footer clearfix">
+  
+	</div>
+		<footer class="article-footer clearfix">
 <div class="article-catetags">
 
 
@@ -115,24 +124,30 @@
 
 
 
-
-<div class="comments-count">
+	<div class="article-share" id="share">
 	
-</div>
+	  <div data-url="x2yline.github.io/2017/04/15/python可视化笔记1-自定义作图风格与参数/" data-title="[python可视化笔记1]自定义作图风格与参数 | x2yline&#39;s blog" data-tsina="leicheng1996" class="share clearfix">
+	  </div>
+	
+	</div>
+
 
 </footer>
 
+   	       
+	</article>
+	
+	
 
-    </article>
-
-
-
-
-
-
-
-</div>
+</div>  
       <div class="openaside"><a class="navbutton" href="#" title="显示侧边栏"></a></div>
+
+  <div id="toc" class="toc-aside">
+  <strong class="toc-title">文章目录</strong>
+ 
+ <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#undefined"><span class="toc-number">1.</span> <span class="toc-text">自定义matplotlib</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">1.1.</span> <span class="toc-text">使用style sheet</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#undefined"><span class="toc-number">1.1.1.</span> <span class="toc-text">合并使用风格</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">1.2.</span> <span class="toc-text">命令申明：使用和改变matplotlib.rcParams这个类似字典变量的值, 或matplotlib.rc传入一个数组类值</span></a></li></ol></li></ol>
+ 
+  </div>
 
 <div id="asidepart">
 <div class="closeaside"><a class="closebutton" href="#" title="隐藏侧边栏"></a></div>
@@ -303,12 +318,89 @@ $(document).ready(function(){
       m.removeClass('moveMain');
       a.css('display', 'block').removeClass('fadeOut');
       o.css('display', 'none');
+      
+      $('#toc.toc-aside').css('display', 'none');
         
     }
   });
 });
 </script>
 
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var ai = $('.article-content>iframe'),
+      ae = $('.article-content>embed'),
+      t  = $('#toc'),
+      ta = $('#toc.toc-aside'),
+      o  = $('.openaside'),
+      c  = $('.closeaside');
+  if(ai.length>0){
+    ai.wrap('<div class="video-container" />');
+  };
+  if(ae.length>0){
+   ae.wrap('<div class="video-container" />');
+  };
+  c.click(function(){
+    ta.css('display', 'block').addClass('fadeIn');
+  });
+  o.click(function(){
+    ta.css('display', 'none');
+  });
+  $(window).scroll(function(){
+    ta.css("top",Math.max(140,320-$(this).scrollTop()));
+  });
+});
+</script>
+
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var $this = $('.share'),
+      url = $this.attr('data-url'),
+      encodedUrl = encodeURIComponent(url),
+      title = $this.attr('data-title'),
+      tsina = $this.attr('data-tsina'),
+      description = $this.attr('description');
+  var html = [
+  '<div class="hoverqrcode clearfix"></div>',
+  '<a class="overlay" id="qrcode"></a>',
+  '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+  '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+  '<a href="#qrcode" class="article-share-qrcode" title="微信"></a>',
+  '<a href="http://widget.renren.com/dialog/share?resourceUrl=' + encodedUrl + '&srcUrl=' + encodedUrl + '&title=' + title +'" class="article-share-renren" target="_blank" title="人人"></a>',
+  '<a href="http://service.weibo.com/share/share.php?title='+title+'&url='+encodedUrl +'&ralateUid='+ tsina +'&searchPic=true&style=number' +'" class="article-share-weibo" target="_blank" title="微博"></a>',
+  '<span title="Share to"></span>'
+  ].join('');
+  $this.append(html);
+
+  $('.hoverqrcode').hide();
+
+  var myWidth = 0;
+  function updatehoverqrcode(){
+    if( typeof( window.innerWidth ) == 'number' ) {
+      myWidth = window.innerWidth;
+    } else if( document.documentElement && document.documentElement.clientWidth) {
+      myWidth = document.documentElement.clientWidth;
+    };
+    var qrsize = myWidth > 1024 ? 200:100;
+    var options = {render: 'image', size: qrsize, fill: '#2ca6cb', text: url, radius: 0.5, quiet: 1};
+    var p = $('.article-share-qrcode').position();
+    $('.hoverqrcode').empty().css('width', qrsize).css('height', qrsize)
+                          .css('left', p.left-qrsize/2+20).css('top', p.top-qrsize-10)
+                          .qrcode(options);
+  };
+  $(window).resize(function(){
+    $('.hoverqrcode').hide();
+  });
+  $('.article-share-qrcode').click(function(){
+    updatehoverqrcode();
+    $('.hoverqrcode').toggle();
+  });
+  $('.article-share-qrcode').hover(function(){}, function(){
+      $('.hoverqrcode').hide();
+  });
+});   
+</script>
 
 
 
@@ -379,4 +471,4 @@ var _hmt = _hmt || [];
 <!-- Tiny_search End -->
 
   </body>
- </html>
+</html>
