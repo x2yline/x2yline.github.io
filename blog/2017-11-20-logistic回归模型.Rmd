@@ -1,0 +1,18 @@
+---
+title: logistic回归模型
+author: x2yline
+date: '2017-11-20'
+slug: logistic回归模型
+categories:
+  - 统计学
+tags:
+  - 统计学
+---
+### 推荐阅读
+1. [Logistic回归原理及公式推导](http://blog.csdn.net/ariessurfer/article/details/41310525)   
+
+> 理解其原理与**极大似然法**
+
+2. [《R语言实战》中广义线性模型讲解](https://www.statmethods.net/advstats/glm.html)  
+
+> [生信菜鸟团公众号R语言实战的笔记]()
