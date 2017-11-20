@@ -33,6 +33,11 @@
   </url>
   
   <url>
+    <loc>/shiny/</loc>
+    <lastmod>2015-08-19T20:29:37-07:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/code/</loc>
     <lastmod>2015-08-19T20:29:37-07:00</lastmod>
   </url>
@@ -40,10 +45,6 @@
   <url>
     <loc>/blog/hello-r-markdown/</loc>
     <lastmod>2015-07-23T21:13:14-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/shiny/</loc>
   </url>
   
   <url>
