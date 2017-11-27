@@ -17,4 +17,3 @@ tags:
 
 > [生信菜鸟团公众号R语言实战的笔记1](https://x2yline.github.io/archives/%E5%B9%BF%E4%B9%89%E7%BA%BF%E6%80%A7%E6%A8%A1%E5%9E%8B1.html)  
 [生信菜鸟团公众号R语言实战的笔记2](https://x2yline.github.io/archives/%E5%B9%BF%E4%B9%89%E7%BA%BF%E6%80%A7%E6%A8%A1%E5%9E%8B2.html)
-

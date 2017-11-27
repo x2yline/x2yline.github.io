@@ -1,0 +1,32 @@
+---
+title: R基础绘图参数par详解
+author: x2yline
+date: '2017-11-27'
+slug: par
+categories:
+  - R
+  - plot
+tags:
+  - plot
+---
+
+## 1. 边距参数
+> 推荐阅读：[https://www.r-bloggers.com/setting-graph-margins-in-r-using-the-par-function-and-lots-of-cow-milk/](https://www.r-bloggers.com/setting-graph-margins-in-r-using-the-par-function-and-lots-of-cow-milk/)  
+
+边距相关参数有两个`mai(mar)`和`omi(oma)`，分别表示内边界【包括轴标题和主标题】和外边界【与窗口边框之间空白区域】，如下图所示：  
+
+![图形边界](http://upload-images.jianshu.io/upload_images/3947437-1e15a0c758af185d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+### mai
+> A numerical vector of the form c(bottom, left, top, right) which gives the margin size specified in inches.
+
+表示绘图区域周围的内边界宽度，其单位为英寸【1英寸=2.54厘米】，其区域如下图所示
+
+### mar
+> A numerical vector of the form c(bottom, left, top, right) which gives the number of lines of margin to be specified on the four sides of the plot. The default is c(5, 4, 4, 2) + 0.1.
+
+除单位为number of lines of text【即文字的行高】外，其余与mai相同
+
+###   
+
+

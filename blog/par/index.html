@@ -9,24 +9,28 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="referrer" content="no-referrer">
 <meta name="author" content="x2yline">
-<meta name="description" content="I recently discovered that from git version 1.8.5 onwards, @ can replace HEAD:
-$ git reset --hard @~2 $ git rebase -i @~10 $ git diff @~2..@~3  And also in most scenarios HEAD can be left out completely, so you can say:
-$ git reset -- @{2}  instead of:
-$ git reset -- HEAD@{2}  It takes some getting used to, but it&rsquo;s definitely faster than typing HEAD.">
+<meta name="description" content="1. 边距参数  推荐阅读：https://www.r-bloggers.com/setting-graph-margins-in-r-using-the-par-function-and-lots-of-cow-milk/
+ 边距相关参数有两个mai(mar)和omi(oma)，分别表示内边界【包括轴标题和主标题】和外边界【与窗口边框之间空白区域】，如下图所示：
+图形边界
+ mai  A numerical vector of the form c(bottom, left, top, right) which gives the margin size specified in inches.
+ 表示绘图区域周围的内边界宽度，其单位为英寸【1英寸=2.54厘米】，其区域如下图所示
+ mar  A numerical vector of the form c(bottom, left, top, right) which gives the number of lines of margin to be specified on the four sides of the plot. The default is c(5, 4, 4, 2) &#43; 0.1.">
 
-<meta property="og:title" content="Use @ instead of HEAD" />
-<meta property="og:description" content="I recently discovered that from git version 1.8.5 onwards, @ can replace HEAD:
-$ git reset --hard @~2 $ git rebase -i @~10 $ git diff @~2..@~3  And also in most scenarios HEAD can be left out completely, so you can say:
-$ git reset -- @{2}  instead of:
-$ git reset -- HEAD@{2}  It takes some getting used to, but it&rsquo;s definitely faster than typing HEAD." />
+<meta property="og:title" content="R基础绘图参数par详解" />
+<meta property="og:description" content="1. 边距参数  推荐阅读：https://www.r-bloggers.com/setting-graph-margins-in-r-using-the-par-function-and-lots-of-cow-milk/
+ 边距相关参数有两个mai(mar)和omi(oma)，分别表示内边界【包括轴标题和主标题】和外边界【与窗口边框之间空白区域】，如下图所示：
+图形边界
+ mai  A numerical vector of the form c(bottom, left, top, right) which gives the margin size specified in inches.
+ 表示绘图区域周围的内边界宽度，其单位为英寸【1英寸=2.54厘米】，其区域如下图所示
+ mar  A numerical vector of the form c(bottom, left, top, right) which gives the number of lines of margin to be specified on the four sides of the plot. The default is c(5, 4, 4, 2) &#43; 0.1." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="/blog/use-at-instead-of-head/" />
+<meta property="og:url" content="/blog/par/" />
 
 
 
-<meta property="article:published_time" content="2015-08-25T17:09:14-05:00"/>
+<meta property="article:published_time" content="2017-11-27T00:00:00&#43;00:00"/>
 
-<meta property="article:modified_time" content="2015-08-25T17:09:14-05:00"/>
+<meta property="article:modified_time" content="2017-11-27T00:00:00&#43;00:00"/>
 
 
 
@@ -42,10 +46,10 @@ $ git reset -- HEAD@{2}  It takes some getting used to, but it&rsquo;s definitel
 <title>
 
 
-     Use @ instead of HEAD 
+     R基础绘图参数par详解 
 
 </title>
-<link rel="canonical" href="/blog/use-at-instead-of-head/">
+<link rel="canonical" href="/blog/par/">
 
 
 
@@ -63,11 +67,11 @@ $ git reset -- HEAD@{2}  It takes some getting used to, but it&rsquo;s definitel
 
 
     
-    <link rel="stylesheet" href="/css/reset.css?t=2017-11-27%2019%3a06%3a27.3172945%20%2b0800%20CST%20m%3d%2b0.114081100">
-    <link rel="stylesheet" href="/css/pygments.css?t=2017-11-27%2019%3a06%3a27.3172945%20%2b0800%20CST%20m%3d%2b0.114081100">
-    <link rel="stylesheet" href="/css/main.css?t=2017-11-27%2019%3a06%3a27.3172945%20%2b0800%20CST%20m%3d%2b0.114081100">
+    <link rel="stylesheet" href="/css/reset.css?t=2017-11-27%2019%3a06%3a27.3112902%20%2b0800%20CST%20m%3d%2b0.108076800">
+    <link rel="stylesheet" href="/css/pygments.css?t=2017-11-27%2019%3a06%3a27.3112902%20%2b0800%20CST%20m%3d%2b0.108076800">
+    <link rel="stylesheet" href="/css/main.css?t=2017-11-27%2019%3a06%3a27.3112902%20%2b0800%20CST%20m%3d%2b0.108076800">
     
-        <link rel="stylesheet" href="/css/override.css?t=2017-11-27%2019%3a06%3a27.3172945%20%2b0800%20CST%20m%3d%2b0.114081100">
+        <link rel="stylesheet" href="/css/override.css?t=2017-11-27%2019%3a06%3a27.3112902%20%2b0800%20CST%20m%3d%2b0.108076800">
     
 
 
@@ -198,7 +202,7 @@ $ git reset -- HEAD@{2}  It takes some getting used to, but it&rsquo;s definitel
                 <div class="title-container">
                     <div class="page-heading">
 
-    Use @ instead of HEAD
+    R基础绘图参数par详解
 
 </div>
 
@@ -206,7 +210,7 @@ $ git reset -- HEAD@{2}  It takes some getting used to, but it&rsquo;s definitel
                 </div>
                 <div class="meta">
                     
-                    <div class="date" title='Tue Aug 25 2015 17:09:14 -0500'>Aug 25, 2015</div>
+                    <div class="date" title='Mon Nov 27 2017 00:00:00 UTC'>Nov 27, 2017</div>
                     
                     
 		    <div class="reading-time"><div class="middot"></div>One minute read</div>
@@ -214,24 +218,34 @@ $ git reset -- HEAD@{2}  It takes some getting used to, but it&rsquo;s definitel
                 </div>
             </div>
             <div class="markdown">
-                <p>I recently discovered that from git version <a href="https://github.com/git/git/blob/master/Documentation/RelNotes/1.8.5.txt#L100">1.8.5</a> onwards, <code>@</code> can replace <code>HEAD</code>:</p>
-
-<pre><code class="language-bash">$ git reset --hard @~2
-$ git rebase -i @~10
-$ git diff @~2..@~3
-</code></pre>
-
-<p>And also in most scenarios <code>HEAD</code> can be left out completely, so you can say:</p>
-
-<pre><code class="language-bash">$ git reset -- @{2}
-</code></pre>
-
-<p>instead of:</p>
-
-<pre><code class="language-bash">$ git reset -- HEAD@{2}
-</code></pre>
-
-<p>It takes some getting used to, but it&rsquo;s definitely faster than typing <code>HEAD</code>.</p>
+                <div class="section level2">
+<h2>1. 边距参数</h2>
+<blockquote>
+<p>推荐阅读：<a href="https://www.r-bloggers.com/setting-graph-margins-in-r-using-the-par-function-and-lots-of-cow-milk/" class="uri">https://www.r-bloggers.com/setting-graph-margins-in-r-using-the-par-function-and-lots-of-cow-milk/</a></p>
+</blockquote>
+<p>边距相关参数有两个<code>mai(mar)</code>和<code>omi(oma)</code>，分别表示内边界【包括轴标题和主标题】和外边界【与窗口边框之间空白区域】，如下图所示：</p>
+<div class="figure">
+<img src="http://upload-images.jianshu.io/upload_images/3947437-1e15a0c758af185d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="图形边界" />
+<p class="caption">图形边界</p>
+</div>
+<div id="mai" class="section level3">
+<h3>mai</h3>
+<blockquote>
+<p>A numerical vector of the form c(bottom, left, top, right) which gives the margin size specified in inches.</p>
+</blockquote>
+<p>表示绘图区域周围的内边界宽度，其单位为英寸【1英寸=2.54厘米】，其区域如下图所示</p>
+</div>
+<div id="mar" class="section level3">
+<h3>mar</h3>
+<blockquote>
+<p>A numerical vector of the form c(bottom, left, top, right) which gives the number of lines of margin to be specified on the four sides of the plot. The default is c(5, 4, 4, 2) + 0.1.</p>
+</blockquote>
+<p>除单位为number of lines of text【即文字的行高】外，其余与mai相同</p>
+</div>
+<div id="section" class="section level3">
+<h3></h3>
+</div>
+</div>
 
                 <br>
 		<p><a href="/blog/">Back to posts</a></p>
